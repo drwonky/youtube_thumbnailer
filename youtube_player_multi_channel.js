@@ -118,10 +118,16 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.PLAYING && active_player === null) {
 		// set exclusive owner of play ability
 		active_player = event.target;
+		document.getElementById(event.target.xvideoId).setAttribute("class", "activeplayer");
 
-	} else if (event.data == YT.PlayerState.ENDED && active_player !== null) {
-		active_player = null;
+		var n,v = document.getElementsByClassName("inactiveplayer");
+		for (n = 0; n < v.length; n++) {
+			var div = v[n];
+			div.style.opacity="0.5";
+			div.style.pointerEvents="none";
+		}
 
+	} else if ((event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) && active_player !== null) {
 		// reset active player to inactive when playing is done
 		document.getElementById(event.target.xvideoId).setAttribute("class", "inactiveplayer");
 
@@ -132,6 +138,7 @@ function onPlayerStateChange(event) {
 			div.style.opacity="1";
 			div.style.pointerEvents="auto";
 		}
+
+		active_player = null;
 	}
 }
-
