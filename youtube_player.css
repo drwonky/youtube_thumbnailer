@@ -71,13 +71,15 @@
     }
 
     .youtube-player .play {
-        height: 54px;
-        width: 72px;
+        height: 64px;
+        width: 64px;
         left: 50%;
         top: 50%;
         margin-left: -36px;
         margin-top: -36px;
         position: absolute;
-        background: url("/assets/yt_play_icon.png") no-repeat;
+		/* comment out the background attribute if you don't want a play button */
+        background: url("yt_play_icon.png") no-repeat;
+		background-size: contain;
         cursor: pointer;
     }
