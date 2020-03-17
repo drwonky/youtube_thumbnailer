@@ -1,10 +1,11 @@
     .youtube-player {
         position: relative;
-        padding-bottom: 56.23%;
+        /*padding-bottom: 56.23%;*/
         /* Use 75% for 4:3 videos */
-        height: 0;
         overflow: hidden;
         max-width: 100%;
+		min-width: 200px;
+		min-height: 200px;
         background: #000;
     }
 
@@ -41,8 +42,8 @@
     }
 
     .youtube-player .title {
-        left: 5%;
-        top: 5%;
+        left: 2%;
+        top: 2%;
         position: absolute;
 		color: white;
 		font-family:Sans-Serif;
@@ -50,8 +51,8 @@
     }
 
     .youtube-player .name {
-        left: 5%;
-        bottom: 5%;
+        left: 2%;
+        bottom: 2%;
         position: absolute;
 		color: white;
 		font-family:Sans-Serif;
@@ -61,8 +62,8 @@
     .youtube-player .thumb {
         height: 32px;
         width: 32px;
-        right: 5%;
-        bottom: 5%;
+        right: 2%;
+        bottom: 2%;
         position: absolute;
         background: solid black;
 		background-size: 32px;
