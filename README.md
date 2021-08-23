@@ -9,8 +9,7 @@ a thumbnail with clickable play button that loads an iframe player when clicked.
 
 I have a website with several "live tiles" on the homepage, they fetch
 interactive content from different locations.  One of the locations is Youtube,
-my latest videos on each of my channels.  The default youtube embedded player is
-a quite chunky and negatively impacts site loading speed, not to mention that it
+my latest videos on each of my channels.  The default youtube embedded player is quite chunky and negatively impacts site loading speed, not to mention that it
 wastes a lot of resources if you aren't actually playing a video.
 
 Here is the design document I wrote for this project:
@@ -48,12 +47,12 @@ thumbnail url to display a 32x32 thumbnail in the lower right of the render area
 and the channel name in the lower left of the render area.  The look mimics the
 embedded player but eschews some of the UI elements to create space.  The space
 is used to create distinct branding for each of the video thumbnails that
-appears on the page.  The distinct branding helps to differentiate the source of
+appear on the page.  The distinct branding helps to differentiate the source of
 the content and convey to the audience the channel topics.
 
 This lightweight embedded thumbnailer is designed to be compatible with my PHP
 based local API cache.  The cache allows you to transparently query the Google
-YouTube API v3, caches the results, and updates the cache entries ever 3600
+YouTube API v3, caches the results, and updates the cache entries every 3600
 seconds.  You can find that project here: https://github.com/drwonky/ytapi_cache
 
 This project is licensed under the MIT License because I used some code from
